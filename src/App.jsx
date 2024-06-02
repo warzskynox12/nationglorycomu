@@ -8,15 +8,13 @@ import HomePage from './HomePage';
 
 const App = () => {
   return (
-    //utilise BrowserRouter
-    <BrowserRouter>
+    <BrowserRouter basename="/nationglorycomu">
       <div>
         <HomePage />
         <AuthPage />
         <ProfilePage />
       </div>
     </BrowserRouter>
-
   );
 };
 

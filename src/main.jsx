@@ -11,10 +11,10 @@ createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/nationglory/" element={<App />} />
-        <Route path="/nationglory/AuthPage" element={<AuthPage />} />
-        <Route path="/nationglory/logout" element={<Logout />} />
-        <Route path="/nationglory/ProfilePage" element={<ProfilePage />} />
+        <Route path="/nationglorycomu/" element={<App />} />
+        <Route path="/nationglorycomu/AuthPage" element={<AuthPage />} />
+        <Route path="/nationglorycomu/logout" element={<Logout />} />
+        <Route path="/nationglorycomu/ProfilePage" element={<ProfilePage />} />
       </Routes>
     </Router>
   </React.StrictMode>

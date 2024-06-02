@@ -1,8 +1,14 @@
 {
+  "homepage": "https://warzskynox12.github.io/nationglorycomu",
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+
+  "deploy": {
+    "branch": "gh-pages",
+    "repo": "https://warzskynox12.github.io/nationglorycomu"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

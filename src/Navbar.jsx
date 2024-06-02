@@ -5,10 +5,10 @@ const Navbar = () => {
   return (
     <nav>
       <ul>
-        <li><Link to="/">Accueil</Link></li>
-        <li><Link to="/AuthPage">Connexion</Link></li>
-        <li><Link to="/logout">Déconnexion</Link></li>
-        <li><Link to="/ProfilePage">Profil</Link></li>
+        <li><Link to="/nationglory/">Accueil</Link></li>
+        <li><Link to="/nationglory/AuthPage">Connexion</Link></li>
+        <li><Link to="/nationglory/logout">Déconnexion</Link></li>
+        <li><Link to="/nationglory/ProfilePage">Profil</Link></li>
       </ul>
     </nav>
   );

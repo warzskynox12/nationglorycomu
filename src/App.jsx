@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthPage from './AuthPage';
 import ProfilePage from './ProfilePage';
 import HomePage from './HomePage';
@@ -8,13 +8,13 @@ import HomePage from './HomePage';
 
 const App = () => {
   return (
-    <BrowserRouter basename="/nationglorycomu">
-      <div>
-        <HomePage />
-        <AuthPage />
-        <ProfilePage />
-      </div>
-    </BrowserRouter>
+    <Router>
+      <Routes>
+        <Route path="/nationglorycomu/" element={<HomePage />} />
+        <Route path="/nationglorycomu/AuthPage" element={<AuthPage />} />
+        <Route path="/nationglorycomu/ProfilePage" element={<ProfilePage />} />
+      </Routes>
+    </Router>
   );
 };
 

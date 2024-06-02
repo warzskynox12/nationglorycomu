@@ -9,14 +9,14 @@ const Navbar = () => {
   return (
     <nav>
       <ul>
-        <li><button onClick={() => window.location.href = '/nationglorycomu/'}>Accueil</button></li>
+        <li><Link to="/nationglorycomu/"><button>Accueil</button></Link></li>
         {user ? (
           <>
-            <li><button onClick={() => window.location.href = '/nationglorycomu/ProfilePage'}>Profil</button></li>
+            <li><Link to="/nationglorycomu/ProfilePage"><button>Profil</button></Link></li>
             <li><Logout /></li>
-            </>
+          </>
         ) : (
-          <li><button onClick={() => window.location.href = '/nationglorycomu/AuthPage'}>Connexion</button></li>
+          <li><Link to="/nationglorycomu/AuthPage"><button>Connexion</button></Link></li>
         )}
       </ul>
     </nav>

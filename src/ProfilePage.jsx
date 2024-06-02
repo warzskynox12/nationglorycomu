@@ -30,7 +30,7 @@ const ProfilePage = () => {
                 setIsGoogleProvider(user.providerData.some(provider => provider.providerId === 'google.com'));
             } else {
                 setUser('');
-                navigate('/nationglory/AuthPage')
+                navigate('/nationglorycomu/AuthPage')
             }
         });
         return () => unsubscribe();

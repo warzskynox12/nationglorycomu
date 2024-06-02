@@ -6,6 +6,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 as uuidv4 } from 'uuid';
 import { getAuth, updateProfile } from "firebase/auth";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
+import  Logout from './Logout';
 
 
 const ProfilePage = () => {
@@ -192,6 +193,9 @@ const ProfilePage = () => {
                         <h2>Modifier l'image de profil</h2>
                         <input type="file" onChange={handleFileChange} />
                         <button onClick={handleClick}>Télécharger l'image de profil</button>
+                    </div>
+                    <div>
+                        <Logout />
                     </div>
                 </div>
             ) : (

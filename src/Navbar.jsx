@@ -1,14 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Firebase from './firebase';
+import Logout from './Logout'
 
 const Navbar = () => {
+  const user = Firebase.auth().currentUser;
+
   return (
     <nav>
       <ul>
-        <li><Link to="/nationglorycomu/">Accueil</Link></li>
-        <li><Link to="/nationglorycomu/AuthPage">Connexion</Link></li>
-        <li><Link to="/nationglorycomu/logout">Déconnexion</Link></li>
-        <li><Link to="/nationglorycomu/ProfilePage">Profil</Link></li>
+        <li><button onClick={() => window.location.href = '/nationglorycomu/'}>Accueil</button></li>
+        {user ? (
+          <>
+            <li><button onClick={() => window.location.href = '/nationglorycomu/ProfilePage'}>Profil</button></li>
+            <li><Logout /></li>
+            </>
+        ) : (
+          <li><button onClick={() => window.location.href = '/nationglorycomu/AuthPage'}>Connexion</button></li>
+        )}
       </ul>
     </nav>
   );

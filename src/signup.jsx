@@ -62,6 +62,8 @@ const Signup = () => {
           });
         }
     console.log('Inscription réussie !');
+    //redirection vers la page de profil
+    window.location.href = '/nationglorycomu/';
     } catch (error) {
       setError(error.message);
       console.error(error.message);
@@ -89,6 +91,7 @@ const Signup = () => {
       });
 
       console.log('Inscription avec Google réussie !');
+      window.location.href = '/nationglorycomu/';
     } catch (error) {
       setError(error.message);
       console.error(error.message);

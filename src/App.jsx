@@ -1,24 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AuthPage from './AuthPage';
 import ProfilePage from './ProfilePage';
 import HomePage from './HomePage';
-import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-const root = createRoot(document.getElementById("root"));
 
 const App = () => {
   return (
-    <BrowserRouter basename="/nationglory">
-      <Routes>
-        <Route path="/" element={<HomePage />} /> 
-        <Route path="/AuthPage" element={<AuthPage />} /> 
-        <Route path="/ProfilePage" element={<ProfilePage />} /> 
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <Switch>
+        <Route exact path="/nationglorycomu/" component={HomePage} />
+        <Route path="/nationglorycomu/AuthPage" component={AuthPage} />
+        <Route path="/nationglorycomu/ProfilePage" component={ProfilePage} />
+      </Switch>
+    </Router>
   );
 };
 
-root.render(<App />);
-
 export default App;
+

@@ -1,21 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthPage from './AuthPage';
 import ProfilePage from './ProfilePage';
 import HomePage from './HomePage';
+import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
+const root = createRoot(document.getElementById("root"));
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/nationglorycomu">
       <Routes>
-        <Route path="/nationglorycomu/" element={<HomePage />} />
-        <Route path="/nationglorycomu/AuthPage" element={<AuthPage />} />
-        <Route path="/nationglorycomu/ProfilePage" element={<ProfilePage />} />
+        <Route path="/" element={<HomePage />} /> 
+        <Route path="/AuthPage" element={<AuthPage />} /> 
+        <Route path="/ProfilePage" element={<ProfilePage />} /> 
       </Routes>
     </Router>
   );
 };
+
+root.render(<App />);
 
 export default App;

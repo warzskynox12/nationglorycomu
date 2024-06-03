@@ -9,13 +9,13 @@ const root = createRoot(document.getElementById("root"));
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter basename="/nationglory">
       <Routes>
         <Route path="/" element={<HomePage />} /> 
         <Route path="/AuthPage" element={<AuthPage />} /> 
         <Route path="/ProfilePage" element={<ProfilePage />} /> 
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 

@@ -1,20 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AuthPage from './AuthPage';
 import ProfilePage from './ProfilePage';
 import HomePage from './HomePage';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/nationglorycomu">
       <Routes>
-        <Route exact path="/nationglorycomu/" component={HomePage} />
-        <Route path="/nationglorycomu/AuthPage" component={AuthPage} />
-        <Route path="/nationglorycomu/ProfilePage" component={ProfilePage} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/AuthPage" element={<AuthPage />} />
+        <Route path="/ProfilePage" element={<ProfilePage />} />
       </Routes>
     </Router>
   );
 };
 
 export default App;
-

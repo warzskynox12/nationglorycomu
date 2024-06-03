@@ -9,7 +9,7 @@ const root = createRoot(document.getElementById("root"));
 
 const App = () => {
   return (
-    <Router basename="/nationglorycomu">
+    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} /> 
         <Route path="/AuthPage" element={<AuthPage />} /> 

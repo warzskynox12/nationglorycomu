@@ -6,7 +6,7 @@ import HomePage from './HomePage';
 
 const App = () => {
   return (
-    <Router basename="">
+    <Router basename="nationglorycomu">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/AuthPage" element={<AuthPage />} />

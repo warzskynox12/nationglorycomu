@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { Children } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthPage from './AuthPage';
 import ProfilePage from './ProfilePage';
 import HomePage from './HomePage';
 
+const router = createBrowserRouter([
+  { 
+    path: '/nationglorycomu/', 
+    element: <HomePage />,
+    Children:[
+      { 
+        path: '/nationglorycomu/auth', 
+        element: <AuthPage />
+      },
+      { 
+        path: '/nationglorycomu/profile', 
+        element: <ProfilePage /> 
+      },
+    ]
+  }
+]);
 
-
-const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/nationglorycomu/" element={<HomePage />} />
-        <Route path="/nationglorycomu/AuthPage" element={<AuthPage />} />
-        <Route path="/nationglorycomu/ProfilePage" element={<ProfilePage />} />
-      </Routes>
-    </Router>
-  );
-};
-
-export default App;

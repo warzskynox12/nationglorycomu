@@ -12,11 +12,11 @@ const Navbar = () => {
         <li><Link to="/nationglorycomu/"><button>Accueil</button></Link></li>
         {user ? (
           <>
-            <li><Link to="/nationglorycomu/ProfilePage"><button>Profil</button></Link></li>
+            <li><Link to="/nationglorycomu/Profile"><button>Profil</button></Link></li>
             <li><Logout /></li>
           </>
         ) : (
-          <li><Link to="/nationglorycomu/AuthPage"><button>Connexion</button></Link></li>
+          <li><Link to="/nationglorycomu/Auth"><button>Connexion</button></Link></li>
         )}
       </ul>
     </nav>

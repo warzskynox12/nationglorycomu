@@ -1,5 +1,6 @@
 import React, { Children } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom';
 import AuthPage from './AuthPage';
 import ProfilePage from './ProfilePage';
 import HomePage from './HomePage';

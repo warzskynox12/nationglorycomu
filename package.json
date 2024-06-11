@@ -4,7 +4,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
   "deploy": {
     "branch": "gh-pages",
     "repo": "https://warzskynox12.github.io/nationglorycomu"
@@ -16,6 +15,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "cors-anywhere": "^0.4.4",
     "express": "^4.19.2",
     "firebase": "^10.12.2",
     "nationsapi": "^1.0.1",
@@ -23,7 +23,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "vite-plugin-proxy": "^0.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
@@ -33,6 +34,8 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "vite": "^5.2.0"
+    "http-proxy-middleware": "^3.0.0",
+    "vite": "^5.2.0",
+    "vite-plugin-proxy": "^0.5.0"
   }
 }

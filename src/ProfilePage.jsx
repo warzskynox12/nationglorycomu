@@ -7,6 +7,9 @@ import { v4 as uuidv4 } from 'uuid';
 import { getAuth, updateProfile } from "firebase/auth";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
 import  Logout from './Logout';
+import  NationsAPI  from 'nationsapi';
+
+
 
 
 const ProfilePage = () => {
@@ -21,9 +24,17 @@ const ProfilePage = () => {
     const [isGoogleProvider, setIsGoogleProvider] = useState(false);
     const [profileImageUrl, setProfileImageUrl] = useState(null);
     const [newProfileImage, setNewProfileImage] = useState(null);
-    
     const navigate = useNavigate()
-
+    const api = new NationsAPI('d74g32Q8nBfid48A7c8BTks4JRDkTL');
+    const non = api.getPlayersCount()
+    console.log(non)
+    useEffect(() => {
+        fetch('https://cors-anywhere.herokuapp.com/https://publicapi.nationsglory.fr/playercount')
+          .then(response => response.json())
+          .then(data => console.log(data))
+          .catch(error => console.error('Error:', error));
+      }, []);
+    
     useEffect(() => {
         const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
             if (user) {

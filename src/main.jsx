@@ -8,19 +8,19 @@ import App from './App';
 
 const router = createBrowserRouter([
   { 
-    path: '/nationglorycomu/', 
+    path: '/nationglorycomu', 
     element: <App />,
     children: [
       {
-        path: '/nationglorycomu/',
+        path: '/', // Change this line
         element: <HomePage />
       },
       { 
-        path: '/nationglorycomu/auth', 
+        path: 'auth', // And this line
         element: <AuthPage />
       },
       { 
-        path: '/nationglorycomu/profile', 
+        path: 'profile', // And this line
         element: <ProfilePage /> 
       },
     ]

@@ -5,7 +5,6 @@ import Logout from './Logout'
 
 const Navbar = () => {
   const user = Firebase.auth().currentUser;
-
   return (
     <nav>
       <ul>

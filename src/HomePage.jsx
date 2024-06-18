@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import firebase from './firebase'; 
-import Navbar from './Navbar';
 
 
   
@@ -30,7 +29,6 @@ const App = () => {
     <div>
       <div>
             <h1>Welcome to the Home Page! {firstName}</h1>
-            <Navbar />
         </div>
   </div>
   );

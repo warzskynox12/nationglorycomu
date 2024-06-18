@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import firebase from './firebase';
-import Navbar from './Navbar';
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 as uuidv4 } from 'uuid';
 import { getAuth, updateProfile } from "firebase/auth";
@@ -223,7 +222,6 @@ const ProfilePage = () => {
     
     return (
         <div>
-            <Navbar />
             <h1>Profil de l'utilisateur</h1>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             {user ? (

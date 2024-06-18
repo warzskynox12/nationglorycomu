@@ -15,10 +15,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "cors-anywhere": "^0.4.4",
-    "express": "^4.19.2",
+    "axios": "^1.7.2",
     "firebase": "^10.12.2",
-    "nationsapi": "^1.0.1",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

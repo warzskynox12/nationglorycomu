@@ -10,6 +10,7 @@ const Signup = () => {
   const [profileImage, setProfileImage] = useState(null);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [pseudong, setPseudong] = useState('');
 
   const handleSignup = async () => {
     setError('');
@@ -46,6 +47,8 @@ const Signup = () => {
             lastName: lastName,
             email: email,
             photoURL: profileImageUrl,
+            pseudong : pseudong,
+            
           });
       
           console.log('Profil utilisateur mis à jour avec succès.');
@@ -59,6 +62,7 @@ const Signup = () => {
             firstName: firstName,
             lastName: lastName,
             email: email,
+            pseudong : pseudong,
           });
         }
     console.log('Inscription réussie !');
@@ -138,6 +142,12 @@ const Signup = () => {
         type="file"
         accept="image/*"
         onChange={(e) => setProfileImage(e.target.files[0])}
+      />
+      <input
+        type="text"
+        placeholder="Pseudong"
+        value={pseudong}
+        onChange={(e) => setPseudong(e.target.value)}
       />
       <button onClick={handleSignup} disabled={isLoading}>S'inscrire</button>
       <button onClick={handleGoogleSignup} disabled={isLoading}>S'inscrire avec Google</button>

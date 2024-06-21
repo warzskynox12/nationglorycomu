@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import firebase from './firebase';
+import firebase from '../../senssible/firebase';
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 as uuidv4 } from 'uuid';
 import { getAuth, updateProfile } from "firebase/auth";
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
-import Logout from './Logout';
+import Logout from '../Navbar/Logout/Logout';
 import axios from 'axios';
 import { set } from 'firebase/database';
 
@@ -227,7 +227,7 @@ const ProfilePage = () => {
             {user ? (
                 <div>
                     <h2>Informations de l'utilisateur</h2>
-                    <img src={user.photoURL || photoORI} alt="Image de profil" />
+                    <img src={user.photoURL || photoORI}/>
                     <p>Prénom: {user.displayName.split(' ')[0]}</p>
                     <p>Nom: {user.displayName.split(' ')[1]}</p>
                     <p>Email: {user.email}</p>
@@ -238,7 +238,7 @@ const ProfilePage = () => {
                         {playerCount && (
                         <select>
                             {Array.from({length: 17}, (_, i) => (
-                            <option key={i} value={playerCount[i] && playerCount[i].name}>
+                            <option key={i} value={playerCount[i] && playerCount[i].name} >
                                 Nombre de connecter sur {playerCount[i] && playerCount[i].name} : {playerCount[i] ? (playerCount[i].players == -1 ? 0 : playerCount[i].players) : null}
                             </option>
                             ))}

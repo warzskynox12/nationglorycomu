@@ -1,9 +1,9 @@
 import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import ReactDOM from 'react-dom';
-import AuthPage from './AuthPage';
-import ProfilePage from './ProfilePage';
-import HomePage from './HomePage'; 
+import { createRoot } from 'react-dom/client'; // Correction ici
+import AuthPage from './composant/AuthPage/AuthPage';
+import ProfilePage from './composant/profiles/ProfilePage';
+import HomePage from './composant/HomePage/HomePage'; 
 import App from './App';
 
 const router = createBrowserRouter([
@@ -12,22 +12,22 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/nationglorycomu/', // Change this line
+        path: '', // Correction ici
         element: <HomePage />
       },
       { 
-        path: '/nationglorycomu/auth', // And this line
+        path: 'auth', // Correction ici
         element: <AuthPage />
       },
       { 
-        path: '/nationglorycomu/profile', // And this line
+        path: 'profile', // Correction ici
         element: <ProfilePage /> 
       },
     ]
   }
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>,

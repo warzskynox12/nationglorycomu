@@ -27,7 +27,7 @@ const ProfilePage = () => {
     const [pseudong, setPseudong] = useState('');
     const [playerCount, setPlayerCount] = useState(null);
     const [infoplayer, setInfoplayer] = useState(null);
-    const url = 'https://apinationscomu.onrender.com/';
+    const url = 'https://apinationscomu.vercel.app/';
     const [latestConnection , setLatestConnection] = useState(0);
     const [latestServer , setLatestServer] = useState('');
     const [country, setCountry] = useState('');

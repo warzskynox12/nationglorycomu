@@ -1,16 +1,19 @@
-import { Outlet } from 'react-router-dom';
-import Navbar from './composant/Navbar/Navbar';
+import { Routes , Route} from 'react-router-dom';
+import Home from './composant/HomePage/HomePage';
+import Auth from './composant/AuthPage/AuthPage';
+import Profile from './composant/Profile/ProfilePage';
+
 
 function App() {
-
   return (
-    <div className="App">
-      <Navbar />
-      <div className="main">
-        <Outlet />
-      </div>
+    <div>
+      <Routes>
+        <Route path="/nationglorycomu/" element={<Home />} />
+        <Route path="/nationglorycomu/auth" element={<Auth />} />
+        <Route path="/nationglorycomu/profile" element={<Profile />} />
+      </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import firebase from '../../senssible/firebase'; 
+import firebase from '../../senssible/firebase';
+import Navbar from '../Navbar/Navbar';
 
 
   
@@ -27,7 +28,8 @@ const App = () => {
 
   return (
     <div>
-      <div>
+        <Navbar />
+        <div>
             <h1>Welcome to the Home Page! {firstName}</h1>
         </div>
   </div>

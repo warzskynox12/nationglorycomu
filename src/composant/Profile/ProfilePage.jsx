@@ -7,6 +7,7 @@ import { getAuth, updateProfile } from "firebase/auth";
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 import Logout from '../Navbar/Logout/Logout';
 import axios from 'axios';
+import Navbar from '../Navbar/Navbar';
 import { set } from 'firebase/database';
 
 
@@ -222,6 +223,7 @@ const ProfilePage = () => {
     
     return (
         <div>
+            <Navbar />
             <h1>Profil de l'utilisateur</h1>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             {user ? (

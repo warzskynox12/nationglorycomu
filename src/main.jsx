@@ -1,10 +1,10 @@
 import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { createRoot } from 'react-dom/client'; // Correction ici
-import AuthPage from './composant/AuthPage/AuthPage';
-import ProfilePage from './composant/profiles/ProfilePage';
-import HomePage from './composant/HomePage/HomePage'; 
-import App from './App';
+import AuthPage from './composant/AuthPage/AuthPage.jsx';
+import ProfilePage from './composant/profiles/ProfilePage.jsx';
+import HomePage from './composant/HomePage/HomePage.jsx'; 
+import App from './App.jsx';
 
 const router = createBrowserRouter([
   { 

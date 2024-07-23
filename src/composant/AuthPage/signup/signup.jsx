@@ -23,25 +23,18 @@ const Signup = () => {
     try {
       const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
 
-        // Vérifiez si l'image de profil existe
         if (profileImage) {
-          // Référence de stockage Firebase
           const storageRef = firebase.storage().ref();
-          // Référence spécifique pour l'image de profil de l'utilisateur
           const profileImageRef = storageRef.child(`profiles/${userCredential.user.uid}`);
           
-          // Téléchargez l'image de profil
           await profileImageRef.put(profileImage);
-          // Obtenez l'URL de téléchargement de l'image de profil
           const profileImageUrl = await profileImageRef.getDownloadURL();
       
-          // Mettre à jour le profil de l'utilisateur avec le nom et l'URL de l'image de profil
           await userCredential.user.updateProfile({
             displayName: `${firstName} ${lastName}`,
             photoURL: profileImageUrl,
           });
       
-          // Enregistrez les informations de l'utilisateur dans Firestore
           await firebase.firestore().collection('users').doc(userCredential.user.uid).set({
             firstName: firstName,
             lastName: lastName,
@@ -53,7 +46,6 @@ const Signup = () => {
       
           console.log('Profil utilisateur mis à jour avec succès.');
         } else {
-          // Si aucune image de profil n'est fournie, mettez à jour seulement les informations de base
           await userCredential.user.updateProfile({
             displayName: `${firstName} ${lastName}`,
           });
@@ -66,7 +58,6 @@ const Signup = () => {
           });
         }
     console.log('Inscription réussie !');
-    //redirection vers la page de profil
     window.location.href = '/nationglorycomu/';
     } catch (error) {
       setError(error.message);
